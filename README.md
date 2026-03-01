@@ -1,7 +1,7 @@
 # 🏢 Enterprise SOHO Network Design & Implementation  
 ### Cisco Packet Tracer
 
-<img src="https://github.com/z30r0x/Authentication_App/blob/5a832f90aee859d94685c0f024476a5b3fa57b18/images/welcome.jpg" width="200" height="400" style="margin: 10px;">
+<img src="Screenshot 2026-03-01 014852.png" width="400" height="300" style="margin: 20px;">
 
 ## 📌 Project Overview
 
