@@ -1,11 +1,10 @@
 # 🏢 Enterprise SOHO Network Design & Implementation  
-### Cisco Packet Tracer
 
 <img src="Screenshot 2026-03-01 014852.png" width="400" height="300" style="margin: 20px;">
 
 ## 📌 Project Overview
 
-This project demonstrates the design and implementation of a Small Office/Home Office (SOHO) Enterprise Network using Cisco Packet Tracer 2022.
+This project demonstrates the design and implementation of a Small Office/Home Office (SOHO) Enterprise Network using Cisco Packet Tracer.
 The network was built based on real enterprise requirements including VLAN segmentation, Inter-VLAN routing, DHCP configuration, and wireless integration.
 
 ## 🏗 Scenario
@@ -51,76 +50,76 @@ Base network provided by ISP:
 
 ## ⚙️ Switch Configuration
 
-enable
-configure terminal
+- enable
+- configure terminal
 
-vlan 10
-name ADMIN_IT
+- vlan 10
+- name ADMIN_IT
 
-vlan 20
-name FINANCE_HR
+- vlan 20
+- name FINANCE_HR
 
-vlan 30
-name CUSTOMER_SERVICE
+- vlan 30
+- name CUSTOMER_SERVICE
 
-interface range fa0/2-4
-switchport mode access
-switchport access vlan 10
+- interface range fa0/2-4
+- switchport mode access
+- switchport access vlan 10
 
-interface range fa0/5-7
-switchport mode access
-switchport access vlan 20
+- interface range fa0/5-7
+- switchport mode access
+- switchport access vlan 20
 
-interface range fa0/8-10
-switchport mode access
-switchport access vlan 30
+- interface range fa0/8-10
+- switchport mode access
+- switchport access vlan 30
 
-interface fa0/1
-switchport mode trunk
+- interface fa0/1
+- switchport mode trunk
 
-end
-write memory
+- end
+- write memory
 
 ## 🌐 Router Configuration (Router-on-a-Stick)
 
-enable
-configure terminal
+- enable
+- configure terminal
 
-interface g0/0
-no shutdown
+- interface g0/0
+- no shutdown
 
-interface g0/0.10
-encapsulation dot1Q 10
-ip address 192.168.1.1 255.255.255.192
+- interface g0/0.10
+- encapsulation dot1Q 10
+- ip address 192.168.1.1 255.255.255.192
 
-interface g0/0.20
-encapsulation dot1Q 20
-ip address 192.168.1.65 255.255.255.192
+- interface g0/0.20
+- encapsulation dot1Q 20
+- ip address 192.168.1.65 255.255.255.192
 
-interface g0/0.30
-encapsulation dot1Q 30
-ip address 192.168.1.129 255.255.255.192
+- interface g0/0.30
+- encapsulation dot1Q 30
+- ip address 192.168.1.129 255.255.255.192
 
 ## 📡 DHCP Configuration
 
-ip dhcp excluded-address 192.168.1.1
-ip dhcp excluded-address 192.168.1.65
-ip dhcp excluded-address 192.168.1.129
+- ip dhcp excluded-address 192.168.1.1
+- ip dhcp excluded-address 192.168.1.65
+- ip dhcp excluded-address 192.168.1.129
 
-ip dhcp pool ADMIN
-network 192.168.1.0 255.255.255.192
-default-router 192.168.1.1
-dns-server 8.8.8.8
+- ip dhcp pool ADMIN
+- network 192.168.1.0 255.255.255.192
+- default-router 192.168.1.1
+- dns-server 8.8.8.8
 
-ip dhcp pool FINANCE
-network 192.168.1.64 255.255.255.192
-default-router 192.168.1.65
-dns-server 8.8.8.8
+- ip dhcp pool FINANCE
+- network 192.168.1.64 255.255.255.192
+- default-router 192.168.1.65
+- dns-server 8.8.8.8
 
-ip dhcp pool CUSTOMER
-network 192.168.1.128 255.255.255.192
-default-router 192.168.1.129
-dns-server 8.8.8.8
+- ip dhcp pool CUSTOMER
+- network 192.168.1.128 255.255.255.192
+- default-router 192.168.1.129
+- dns-server 8.8.8.8
 
-end
-write memory
+- end
+- write memory
