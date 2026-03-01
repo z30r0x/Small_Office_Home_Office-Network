@@ -1,6 +1,8 @@
 # 🏢 Enterprise SOHO Network Design & Implementation  
 ### Cisco Packet Tracer
 
+<img src="https://github.com/z30r0x/Authentication_App/blob/5a832f90aee859d94685c0f024476a5b3fa57b18/images/welcome.jpg" width="200" height="400" style="margin: 10px;">
+
 ## 📌 Project Overview
 
 This project demonstrates the design and implementation of a Small Office/Home Office (SOHO) Enterprise Network using Cisco Packet Tracer 2022.
